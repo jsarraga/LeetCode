@@ -11,4 +11,6 @@ class Solution:
             if i == "L":
                 balance -= 1
 
+        #  uses all if statements bc balance can be == 0 independently of what i is on each iteration
+
         return count
