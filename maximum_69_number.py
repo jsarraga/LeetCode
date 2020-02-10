@@ -18,12 +18,14 @@ class Solution:
             
         return max_num
 
-    # SLIGHTLY optimized solution
-    # when iterating through the int, chaning the first 6 to a 9 will suffice. then break to return new num
-        # num_list = list(str(num))
-        # for i in range(len(num_list)):
-        #     if num_list[i] == '6':
-        #         num_list[i] = '9'
-        #         break
-        # return ''.join(num_list)
+    # optimized solution
+    # when iterating through the int, chaning the first 6 to a 9 will suffice. then break (no need to continue iterating)
+    # to return new num
+    def maximum69Number (self, num: int) -> int:
+        num_list = list(str(num))
+        for i in range(len(num_list)):
+            if num_list[i] == '6':
+                num_list[i] = '9'
+                break
+        return ''.join(num_list)
     
