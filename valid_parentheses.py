@@ -16,6 +16,39 @@ def isValid(s):
                     return False
         return not stack
 
+# OPTIMIZED
+def optimalIsValid(s):
+        stack = []
+        
+        for char in s:
+            if char == "(" or char == "[" or char =="{":
+                stack.append(char)
+                continue
+            
+            if len(stack) == 0:
+                return False
+            
+            if char == ")":
+                prev = stack.pop()
+                if prev == "{" or prev == "[":
+                    return False
+            
+            if char == "]":
+                prev = stack.pop()
+                if prev == "(" or prev == "{":
+                    return False
+            
+            if char == "}":
+                prev = stack.pop()
+                if prev == "(" or prev == "[":
+                    return False
+        
+        if len(stack) == 0:
+            return True
+        else: 
+            return False
+            
+
 
 s = "([)]"
 
