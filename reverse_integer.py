@@ -12,6 +12,7 @@ class Solution:
         else: 
             # convert to string, reverse using splice. 
             # converts negative integer by skipping the "-" in the neg number when splicing to reverse then concatenating it on the end.
+            # first splices from the first number on [1:]. Then splice again to reverse it [::-1]
             rev = int(str(x)[::-1] if x>= 0 else "-" + str(x)[1:][::-1])
             # handling for edge case if out of range
             if rev <= -2 ** 31 or rev >= 2 ** 31:
