@@ -8,16 +8,20 @@ def maxProfit(prices):
     minimum = prices[0]
     
     
-    for i in prices:
-        # if i bigger than the smallest number
-        if i > minimum:
-            # and it generates more profit that the counter
-            if i - minimum > profit:
-                # update profit
-                profit = i - minimum
-        else:
-            # account for last element as min
-            minimum = i
+   for i in prices:
+       # if i is less than min
+            if i < min_price:
+                # min becomes i
+                min_price = i
+            else:
+                # calculate profit
+                profit = i - min_price
+                # if profit > max profit
+                if profit > max_profit:
+                    # max_profit becomes profit
+                    max_profit = profit
+                
+        return max_profit
     
     return profit
             
