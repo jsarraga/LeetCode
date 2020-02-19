@@ -3,7 +3,7 @@ class Solution:
         dict = {"I":1, "V":5, "X":10, "L":50, "C":100, "D":500, "M":1000}
         num = 0
         
-        for i in range(0, len(s) - 1):
+        for i in range(0, len(s) - 1):     # len(s) - 1 because indexes start at 0. need -1 to account for whole str
             if dict[s[i]] < dict[s[i+1]]:  # checks if numeral to the right is larger. 
                 num -= dict[s[i]]          # if so, subtract smaller numeral value from the total
             else: 
