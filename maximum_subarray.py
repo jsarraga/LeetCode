@@ -13,7 +13,7 @@ def maxSubArray(self, nums: List[int]) -> int:
         # if curr_sum is larger than max, it becomes max
         elif curr_sum > max_sum:
             max_sum = curr_sum
-        # if curr_sum ever dips below 0, reset sum string
+        # if curr_sum ever dips below 0, reset sum string. A negative number won't be the max_sum
         elif curr_sum < 0:
             curr_sum = 0     
     return max_sum
