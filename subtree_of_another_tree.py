@@ -13,7 +13,7 @@ class Solution:
         # checks if the two trees are the same
         def sameTree(p, q):
             if p and q:
-                return if p.val == q.val and sameTree(p.left, q) and sameTree(p.right, q)
+                return p.val == q.val and sameTree(p.left, q) and sameTree(p.right, q)
             return p is q
         
         # if s is None, there can be no subtree --> false
