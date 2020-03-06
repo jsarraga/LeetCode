@@ -19,7 +19,7 @@
 class Solution:
     def diameterOfBinaryTree(self, root):
         self.result = 0
-
+    
         def depth(root):
             if not root:
                 return 0

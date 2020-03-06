@@ -12,8 +12,8 @@ class Solution:
         q = self.preorder(q, output)
         return p == q
         
-    #  traverse the tree in preorder (root, left, right)
-    # then compare the two
+    #  traverse the tree in preorder (root, left, right) --> check that solution if need explanation
+    #  then compare the two
     def preorder(self, root, output):
         output = []
         self.helper(root, output)
