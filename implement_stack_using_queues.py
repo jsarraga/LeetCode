@@ -1,3 +1,5 @@
+# pretty straight forward answer here. Only thing is the boolean epmty() function
+
 class MyStack:
 
     def __init__(self):
