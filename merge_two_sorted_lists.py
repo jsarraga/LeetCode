@@ -41,3 +41,18 @@ class Solution:
         
             
         return head.next
+
+# OPTIMIZED 
+    def mergeTwoLists1(self, l1, l2):
+        dummy_head = ListNode(0)
+        temp = dummy_head
+        while l1 and l2:
+            if l1.val < l2.val:
+                temp.next = l1
+                l1 = l1.next
+            else:
+                temp.next = l2
+                l2 = l2.next
+            temp = temp.next
+        temp.next = l1 or l2
+        return dummy_head.next
