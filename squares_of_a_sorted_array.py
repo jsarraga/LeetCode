@@ -1,5 +1,7 @@
 # Approach 1:
 # square each number, then sort the array
+# Time: O(n log n)
+# Space: O(n)
 
 
 def sortedSquares(A):
@@ -11,6 +13,8 @@ def sortedSquares(A):
 # bc the arrays are sorted, have one pointer on the left and one pointer on the right. 
 # Compare the squares of each element, and take the larger of the squares and append it to the end of the result array
 # then move the corresponding pointers 
+# Time: O(n)
+# Space: O(n)
 
 def sortedSquares1(A):
     write_pointer = len(A) - 1
