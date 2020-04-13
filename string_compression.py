@@ -34,6 +34,9 @@ def compress(chars):
         chars = chars[:i]
         # returning index same as returning len(chars)
         return i
+
+# Time = O(n)
+# Space O(1)
                 
         
             
