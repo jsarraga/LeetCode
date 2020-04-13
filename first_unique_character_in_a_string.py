@@ -12,7 +12,7 @@ def firstUniqChar(s):
     
     return -1
 
-#slightly faster way using Counter()
+# slightly faster way using Counter()
 
 from collections import Counter
 def firstUniqChar1(s):
@@ -22,4 +22,13 @@ def firstUniqChar1(s):
         # .get() returns the value of given key s[i]
         if char_count.get(s[i]) == 1:
             return i
+    return -1
+
+# other option
+def firstUniqChar2(s):
+    count = collections.Counter(s)
+
+    for idx, ch in enmuerate(s):
+        if count[ch] == 1:
+            return idx
     return -1
