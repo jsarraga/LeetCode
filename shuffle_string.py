@@ -1,3 +1,21 @@
+# dictionary method
+def restoreString1(s,indices):
+    # make a dicitonary, matching up s and indices
+    # i.e. {indices[0] : s[0]}
+    cdict = {}
+    # since both lengths are equal, we'll iterate through len(indices) to match up and create dict
+    for i in range(len(indices)):
+        cdict[indices[i]] = s[i]
+        
+    result = ''
+    # iterate through the same length. if i in  cdict (which it is), tack on it's value to result
+    for i in range(len(indices)):
+        if i in cdict:
+            result += cdict[i]
+    
+    return result
+
+# making a list with place holders. filling place holders in place using a pointer
 def restoreString(s,indices):
     # make a list of elements = len(s)
     res = [0] * len(s)
@@ -11,6 +29,7 @@ def restoreString(s,indices):
         j += 1
     # join the list, it will already be in order
     return ''.join(res)
+
 
 s = "codeleet"
 indices = [4,5,6,7,0,2,1,3]
