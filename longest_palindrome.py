@@ -2,8 +2,6 @@ from collections import Counter
 def longestPalindrome(s):
         # create a dictionary  {char: count}
         cdict = {}
-        
-        
         for c in s:
             if c in cdict:
                 cdict[c] += 1
@@ -22,8 +20,7 @@ def longestPalindrome(s):
                     if count % 2 ==0:
                         output += count
                     else:
-                        output += count -1
-                        
+                        output += count -1      
             else:
                 if count % 2 == 0:
                     output += count
