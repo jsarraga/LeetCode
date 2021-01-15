@@ -8,7 +8,8 @@ def minSubArrayLen(s, nums) -> int:
     total = 0
     left = 0
     result = len(nums) + 1
-
+    e = enumerate(nums)
+    print(e)
     # use enumerate becuase we'll use the indexes to calculate the min length
     for right, n in enumerate(nums):
         # add all elements in the array
